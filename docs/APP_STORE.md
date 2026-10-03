@@ -4,13 +4,14 @@
 
 - Name: MissEnv
 - Platform: macOS
+- App Store Connect app ID: 6818769037
 - Bundle ID: vote.aib.missenv
 - Version: 0.1.0 / build 1
 - Primary category: Developer Tools
 - Secondary category: Productivity (optional)
 - Developer / copyright: AIB Inc. / © 2026 AIB Inc.
 - License: MIT
-- Suggested price: Free
+- Price: Free (175 countries and regions)
 - Primary language: Korean
 - Support URL: https://github.com/hsu3046/MissEnv/issues
 - Privacy policy URL: https://github.com/hsu3046/MissEnv/blob/main/docs/PRIVACY.md
@@ -40,7 +41,9 @@ The current direct build is not an App Store submission. The App Store target mu
 
 Use MissEnv.xcodeproj / MissEnv scheme, select the AIB Inc. team, confirm automatic signing, archive, and validate before upload. Exercise folder selection, relaunch/bookmark restoration, nested env discovery, saving/backups, and Finder reveal in the sandboxed build. Screenshots must use invented values and the submitted build. Confirm privacy answers, age rating, free availability and contact information in App Store Connect. The privacy draft assumes the unchanged local-only app; re-evaluate if networking/analytics is added.
 
-No App Store upload or review submission is confirmed by this document. App Store Connect login and distribution provisioning are needed. Legal agreements and any enrollment/payment steps must be completed by the account holder.
+As of 2026-10-03, the AIB Inc. app record has been created and version 0.1.0 (build 1) was archived for arm64 and x86_64, exported with cloud-managed Apple Distribution signing, validated without errors, and uploaded successfully. App Store Connect processed the build and it is attached to the version. Korean metadata, three screenshots using invented values, age rating 4+, review contact, no-encryption answers, free worldwide availability, and the data-not-collected privacy label have been saved. Release is manual after approval.
+
+An isolated ad-hoc app with the same sandbox entitlements was exercised with invented files: folder selection, nested discovery, inline editing, original save and backup, relaunch/bookmark restoration, and comparison. This does not claim that the store-signed binary was run locally. Apple confirmed receipt of the submission on 2026-10-03; the status is Waiting for Review. App Store approval and public store availability are still pending. Legal agreements and any enrollment/payment steps require the account holder's authorization.
 
 ## Primary references
 
