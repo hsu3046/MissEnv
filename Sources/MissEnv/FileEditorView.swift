@@ -33,7 +33,7 @@ struct FileEditorView: View {
                 }.font(.caption).foregroundStyle(.orange).padding(12).background(Color.orange.opacity(0.08))
             }
             HStack(spacing: 16) {
-                Picker("편집 방식", selection: Binding(get: { store.editorMode }, set: store.selectEditorMode)) {
+                Picker("편집 방식", selection: Binding(get: { store.editorMode }, set: { store.selectEditorMode($0) })) {
                     ForEach(WorkspaceStore.EditorMode.allCases) { mode in Text(mode.rawValue).tag(mode) }
                 }.pickerStyle(.segmented).frame(width: 220)
                 Spacer()
@@ -254,13 +254,13 @@ struct InlineVariableEditor: View {
         VStack(alignment: .leading, spacing: 18) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("변수명").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
-                TextField("VARIABLE_NAME", text: Binding(get: { store.variableDraft?.key ?? "" }, set: store.updateVariableKey))
+                TextField("VARIABLE_NAME", text: Binding(get: { store.variableDraft?.key ?? "" }, set: { store.updateVariableKey($0) }))
                     .textFieldStyle(.plain).font(.system(size: 15, weight: .semibold, design: .monospaced))
                     .focused($keyFocused)
             }
             VStack(alignment: .leading, spacing: 8) {
                 Text("값").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
-                CodeTextEditor(text: Binding(get: { store.variableDraft?.value ?? "" }, set: store.updateVariableValue), allowsNativeUndo: true)
+                CodeTextEditor(text: Binding(get: { store.variableDraft?.value ?? "" }, set: { store.updateVariableValue($0) }), allowsNativeUndo: true)
                     .id(draftID).frame(height: 140)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
             }
