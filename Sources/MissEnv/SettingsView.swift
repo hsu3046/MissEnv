@@ -14,7 +14,8 @@ struct SettingsView: View {
     private var general: some View {
         VStack(alignment: .leading, spacing: 18) {
             Text("파일 탐색").font(.title2.bold())
-            Toggle("example 파일 포함", isOn: Binding(get: { store.includeExamples }, set: store.setIncludeExamples))
+            // Explicit closure avoids a Swift 6.3 actor-isolated method reabstraction crash.
+            Toggle("example 파일 포함", isOn: Binding(get: { store.includeExamples }, set: { store.setIncludeExamples($0) }))
             Text(".env.example 같은 예제 파일을 목록·검색·비교에 포함합니다. 변경하면 목록을 새로고침합니다.")
                 .font(.callout).foregroundStyle(.secondary)
             Spacer()
