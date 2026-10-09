@@ -44,6 +44,7 @@ macOS 14 이상에서 사용할 수 있습니다. 오른쪽 위 **+** 또는 **�
 
 | 단축키 | 기능 |
 |---|---|
+| ⌘N | MissEnv 창 열기 |
 | ⌘O | 폴더 등록 |
 | ⌘S | 변경 저장 |
 | ⌘R | 목록 새로고침 |
@@ -53,6 +54,8 @@ macOS 14 이상에서 사용할 수 있습니다. 오른쪽 위 **+** 또는 **�
 
 ## 제작사와 지원
 
-[AIB Inc.](https://www.aib.vote) · [소스 코드](https://github.com/hsu3046/MissEnv) · [문의 및 문제 신고](https://github.com/hsu3046/MissEnv/issues)
+[AIB Inc.](https://www.aib.vote) · [소스 코드](https://github.com/hsu3046/MissEnv) · [문의 및 문제 신고](https://github.com/hsu3046/MissEnv/blob/main/docs/SUPPORT.md)
 
 © 2026 AIB Inc. · [MIT License](../LICENSE)
+
+창을 닫아도 MissEnv는 실행 중입니다. **파일 → MissEnv 창 열기** 또는 **⌘N**으로 다시 열 수 있습니다.

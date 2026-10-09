@@ -30,9 +30,7 @@ struct MissEnvApp: App {
         .defaultSize(width: 1320, height: 840)
         .windowStyle(.titleBar)
         .commands {
-            CommandGroup(replacing: .newItem) {
-                Button("탐색 폴더 등록…", action: store.addProjectPanel).keyboardShortcut("o")
-            }
+            MainWindowCommands(store: store)
             CommandGroup(replacing: .saveItem) {
                 Button("변경 저장…", action: store.requestSave).keyboardShortcut("s").disabled(!store.isDirty)
                 Button("원본 다시 불러오기", action: store.reloadFromDisk).disabled(store.selectedFile == nil)
@@ -47,5 +45,23 @@ struct MissEnvApp: App {
             }
         }
         Settings { SettingsView().environmentObject(store) }
+    }
+}
+
+// Keep reopening available even when there is no focused window.
+private struct MainWindowCommands: Commands {
+    @Environment(\.openWindow) private var openWindow
+    @ObservedObject var store: WorkspaceStore
+
+    var body: some Commands {
+        CommandGroup(replacing: .newItem) {
+            Button("MissEnv 창 열기") {
+                openWindow(id: "main")
+            }
+            .keyboardShortcut("n")
+            Divider()
+            Button("탐색 폴더 등록…", action: store.addProjectPanel)
+                .keyboardShortcut("o")
+        }
     }
 }

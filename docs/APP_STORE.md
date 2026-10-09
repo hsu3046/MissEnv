@@ -6,14 +6,14 @@
 - Platform: macOS
 - App Store Connect app ID: 6818769037
 - Bundle ID: vote.aib.missenv
-- Version: 0.1.0 / build 1
+- Version: 0.1.0 / build 2
 - Primary category: Developer Tools
 - Secondary category: Productivity (optional)
 - Developer / copyright: AIB Inc. / © 2026 AIB Inc.
 - License: MIT
 - Price: Free (175 countries and regions)
 - Primary language: Korean
-- Support URL: https://github.com/hsu3046/MissEnv/issues
+- Support URL: https://github.com/hsu3046/MissEnv/blob/main/docs/SUPPORT.md
 - Privacy policy URL: https://github.com/hsu3046/MissEnv/blob/main/docs/PRIVACY.md
 - Marketing URL: https://www.aib.vote
 - Subtitle: 프로젝트 환경변수를 한곳에서
@@ -50,3 +50,8 @@ An isolated ad-hoc app with the same sandbox entitlements was exercised with inv
 - https://developer.apple.com/documentation/Xcode/preparing-your-app-for-distribution
 - https://developer.apple.com/help/account/provisioning-profiles/create-an-app-store-provisioning-profile/
 - https://developer.apple.com/help/account/create-certificates/certificates-overview
+
+
+## 2026-10-09 review fixes
+
+Build 2 adds File → MissEnv 창 열기 (⌘N) so the main window can be reopened after closing. A dedicated support page now provides inquiry instructions, troubleshooting and links to the manual and support request form. Local verification confirmed reopening preserves unsaved edits. All 51 core tests and the release build passed. The universal App Store archive and signed export succeeded; resubmission is in progress.

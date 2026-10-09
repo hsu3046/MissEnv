@@ -31,7 +31,7 @@ struct SettingsView: View {
                 guide("편집과 저장", content: "사이드바에서 파일을 고르고 변수를 선택하세요. 연필 버튼으로 인라인 편집하고 적용을 누릅니다. ⌘S 또는 변경 저장으로 변경 내용을 확인한 뒤 원본에 저장합니다. 삭제할 때는 재확인 창이 표시됩니다.")
                 guide("파일 비교", content: "비교 탭에서 같은 프로젝트의 다른 환경 파일을 선택하세요. 현재 파일·기준 파일의 값 차이와 각 파일에만 있는 변수를 확인할 수 있습니다. 비교 화면 자체는 파일을 변경하지 않습니다.")
                 guide("원본과 백업", content: "값은 원본 파일에서 직접 읽고 씁니다. 매 저장 전에 이전 원본을 같은 폴더의 .MissEnvBackups에 보관합니다. 백업에도 실제 값이 들어 있으므로 해당 폴더를 Git에 올리지 마세요. 외부에서 원본이 바뀌면 덮어쓰기를 차단하고, 미저장 내용은 유지합니다.")
-                guide("단축키", content: "⌘O  폴더 등록\n⌘S  변경 저장\n⌘R  목록 새로고침\n⌘1  전체 프로젝트\n⌘Z / ⇧⌘Z  실행 취소 / 다시 실행\n⌘,  설정")
+                guide("단축키", content: "⌘N  MissEnv 창 열기\n⌘O  폴더 등록\n⌘S  변경 저장\n⌘R  목록 새로고침\n⌘1  전체 프로젝트\n⌘Z / ⇧⌘Z  실행 취소 / 다시 실행\n⌘,  설정")
                 Link("온라인 사용 설명서", destination: URL(string: "https://github.com/hsu3046/MissEnv/blob/main/docs/USER_GUIDE.md")!)
             }.frame(maxWidth: .infinity, alignment: .leading).padding(24)
         }
@@ -49,7 +49,7 @@ struct SettingsView: View {
                 Text("제작사 · AIB Inc.").font(.headline)
                 Link("www.aib.vote", destination: URL(string: "https://www.aib.vote")!)
                 Link("GitHub · 소스 코드", destination: URL(string: "https://github.com/hsu3046/MissEnv")!)
-                Link("문의 · 문제 신고", destination: URL(string: "https://github.com/hsu3046/MissEnv/issues")!)
+                Link("문의 · 문제 신고", destination: URL(string: "https://github.com/hsu3046/MissEnv/blob/main/docs/SUPPORT.md")!)
                 Text("개인정보").font(.headline)
                 Text("계정과 서버 없이 동작합니다. 환경변수 파일과 값은 외부로 전송하지 않으며, 등록 목록에는 폴더 정보만 저장합니다.")
                     .font(.callout).foregroundStyle(.secondary)
