@@ -55,3 +55,8 @@ An isolated ad-hoc app with the same sandbox entitlements was exercised with inv
 ## 2026-10-09 review fixes
 
 Build 2 adds File → MissEnv 창 열기 (⌘N) so the main window can be reopened after closing. A dedicated support page now provides inquiry instructions, troubleshooting and links to the manual and support request form. Local verification confirmed reopening preserves unsaved edits. All 51 core tests and the release build passed. The universal App Store archive and signed export succeeded; resubmission is in progress.
+
+
+## 2026-10-09 · Build 2 resubmitted
+
+App Store Connect API confirmed WAITING_FOR_REVIEW at 2026-10-09 00:36:49 UTC (09:36:49 KST), submission bc9062ea-7743-4235-aaad-597d5b474594. Version 0.1.0 now references VALID build 2 (867fb9b5-6dd0-4dac-91dd-b08f07d63e8b). Korean support URL points to the published docs/SUPPORT.md page. Both rejected issues were resolved and the existing submission was resubmitted through official API. Approval remains pending; release remains manual.
